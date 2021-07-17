@@ -1,3 +1,4 @@
 .env
 *.txt
+!requirments.txt
 __pycache__
