@@ -1,18 +1,18 @@
+# code from https://github.com/jerrytigerxu/Simple-Python-Chatbot
 import nltk
-nltk.download('punkt')
-nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
-lemmatizer = WordNetLemmatizer()
 import json
 import pickle
-
 import numpy as np
 from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
+from keras.layers import Dense, Dropout
 from keras.optimizers import SGD
 import random
 
+nltk.download('punkt')
+nltk.download('wordnet')
 
+lemmatizer = WordNetLemmatizer()
 words=[]
 classes = []
 documents = []
@@ -70,14 +70,15 @@ for doc in documents:
     output_row[classes.index(doc[1])] = 1
 
     training.append([bag, output_row])
+
 # shuffle our features and turn into np.array
 random.shuffle(training)
 training = np.array(training)
+
 # create train and test lists. X - patterns, Y - intents
 train_x = list(training[:,0])
 train_y = list(training[:,1])
 print("Training data created")
-
 
 # Create model - 3 layers. First layer 128 neurons, second layer 64 neurons and 3rd output layer contains number of neurons
 # equal to number of intents to predict output intent with softmax
