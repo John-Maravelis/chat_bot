@@ -26,7 +26,13 @@
   },
   {
     "tag": "search",
-    "patterns": ["What time is it?", "What's the tallest building in the world?",],
+    "patterns": [""],
+    "responses": [""],
+    "context": [""]
+  },
+  {
+    "tag": "spotify",
+    "patterns": [""],
     "responses": [""],
     "context": [""]
   }
