@@ -21,19 +21,19 @@
   },
   {"tag": "options",
    "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
-   "responses": [""],
+   "responses": ["You can ask me anything!", "Ask me a question and I'll try answering it"],
    "context": [""]
   },
   {
-    "tag": "search",
-    "patterns": [""],
-    "responses": [""],
+    "tag": "google",
+    "patterns": ["Search google for", "Google what's the", "google this for me", "Open google and search this for me"],
+    "responses": ["Here's the Google result I found for you:", "The answer I found was:"],
     "context": [""]
   },
   {
-    "tag": "spotify",
-    "patterns": [""],
-    "responses": [""],
+    "tag": "wikipedia",
+    "patterns": ["Search wikipedia for", "What's on Wikipedia for", "Open wikipedia and search this for me"],
+    "responses": ["Here's the Wikipedia result I found for you:", "The answer I found was:"],
     "context": [""]
   }
 ]
